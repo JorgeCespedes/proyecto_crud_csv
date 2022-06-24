@@ -10,9 +10,10 @@ def menu():
             op = int(input('''
         Selecciona una opción:
             [1] Ingresa personal
-            [2] Listado de personal
-            [3] Borrar personal
-            [4] Salir
+            [2] Listar personal
+            [3] Modificar personal
+            [4] Borrar personal
+            [5] Salir
         '''))
 
             if op == 1:
@@ -26,10 +27,20 @@ def menu():
 
             elif op == 2:
                 listar_personal()
+
             elif op == 3:
-                borrar_personal()
+                listar_personal()
+                code = int(input('    Codigo a modificar: '))
+                modificar_personal(code)
+
             elif op == 4:
+                listar_personal()
+                code = int(input('    Codigo a borrar: '))
+                borrar_personal(code)
+
+            elif op == 5:
                 quit()
+
             else:
                 print('Opción no válida.')
 

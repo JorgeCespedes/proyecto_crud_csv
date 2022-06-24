@@ -3,6 +3,7 @@ import random
 
 def check_codigo():
     codigo = random.randint(1000,9999)
+    codigo = int(codigo)
     return codigo
 
 
@@ -47,11 +48,11 @@ def check_cargo():
     
     try:
         op = int(input('''
-        Escoge el cargo: 
-            [1] Obrero
-            [2] Tecnico
-            [3] Administrativo
-            '''))
+    Escoge el cargo: 
+        [1] Obrero
+        [2] Tecnico
+        [3] Administrativo
+        '''))
 
         if op == 1:
             cargo = 'Obrero'
