@@ -1,4 +1,5 @@
 from clases import *
+from check_input import *
 import csv
 from csv import writer
 from csv import reader
@@ -77,11 +78,16 @@ def modificar_personal(code):
     for item in lista_datos:
         for elem in item:
             if elem == code:
-                print('Codigo : ', item[0])
-                print('Nombre : ', item[1])
-                print('Edad   : ', item[2])
-                print('Cargo  : ', item[3])
 
-
+                nombre = item[1]
+                edad   =  item[2]
+                cargo  = item[3]
     
+    codigo = code
+    nombre = check_nombre()
+    edad  = check_edad()
+    cargo = check_cargo()
+
+    personal = Personal(codigo, nombre, edad, cargo)
+    ingresar_personal(personal)
         
