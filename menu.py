@@ -1,4 +1,4 @@
-from clases import *
+from clases.personal import *
 from metodos import *
 from check_input import *
 

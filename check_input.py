@@ -34,8 +34,8 @@ def check_edad():
             print('Ingresa una edad válido')
             continue
 
-        if edad <= 0:
-            print('Ingresa una edad positiva.')
+        if edad <= 0 or edad >= 99:
+            print('Ingresa una edad correcta.')
             continue
         else:
             break
